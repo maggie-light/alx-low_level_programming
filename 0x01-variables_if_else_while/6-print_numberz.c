@@ -2,11 +2,10 @@
 /**
  * main - print if the number is positive, zero, or negative
  *
- * Description: using the main functio
- * this program prints "Programming is positive, zero, negative
- * Return: 0
+ * Description: using the main function
+ * this program prints "Programming is positive, zero, negative: 0
  */
-in main(void)
+int main(void)
 {
 	int n;
 
@@ -17,4 +16,3 @@ in main(void)
 	putchar('\n');
 	return (0);
 }
-
