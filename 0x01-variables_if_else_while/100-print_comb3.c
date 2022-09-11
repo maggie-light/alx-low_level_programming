@@ -1,12 +1,13 @@
 #include <stdio.h>
 /**
- * main - prints the numbers 00 to 99, numbers separated by a comma followed by a space, in ascending order.
+ * main - Prints the numbers from 00 to 99, numbers separated by a comma followed by a space,, in ascending order.
  *
  * Return: Always 0
  */
 int main(void)
 {
-	int num1, num2;
+	int num1;
+	int num2;
 
 	for (num1 = 0; num1 < 10; num++)
 	{
@@ -14,7 +15,7 @@ int main(void)
 		{
 			putchar((num1 % 10) + '0');
 			putchar((num2 % 10) + '0');
-			if (num1 == 9 && num2 == 9)
+			if (num == 9 && num2 == 9)
 				continue;
 			putchar(',');
 			putchar(' ');
@@ -23,3 +24,6 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
+		
+ *
+ * 
