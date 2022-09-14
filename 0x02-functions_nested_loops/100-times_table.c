@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_times_table - prints the times table 
+ * print_times_table - prints the times table
  * @n: function argument
  * Return: nothing
  */
@@ -36,5 +36,5 @@ void print_times_table(int n)
 	_putchar('\n');
 	}
 	}
-}	
-			
+}
+
