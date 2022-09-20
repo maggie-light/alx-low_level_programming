@@ -4,7 +4,7 @@
  * print_rev - a function that prints a string, in reverse
  * @s: pointer to a string
  */
-void print_rev(char *s);
+void print_rev(char *s)
 {
 	int i, n;
 
