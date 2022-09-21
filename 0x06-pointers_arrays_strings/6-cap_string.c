@@ -21,5 +21,5 @@ char *cap_string(char *X)
 		}
 		a++;
 	}
-	return (x);
+	return (X);
 }
