@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 /**
  * _strcmp - for comparism
  * @s1: parameter
