@@ -5,7 +5,7 @@
  * @a: parameter1
  * @size: parameter2
  */
- void print_diagsums(int *a, int size)
+void print_diagsums(int *a, int size)
 {
 	int index, sum1 = 0, sum2 = 0;
 
@@ -22,6 +22,8 @@
 	}
 	printf("%d, %d\n", sum1, sum2);
 }
+
+
 
 
 
