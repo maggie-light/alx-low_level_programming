@@ -7,8 +7,8 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
-	_putchar("%c", name);
-	return;
+	if (!name || !f)
+		return;
 	f(name);
 }
 
