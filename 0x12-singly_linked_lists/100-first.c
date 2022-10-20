@@ -8,7 +8,7 @@ void __attribute__((constructor)) hare(void);
  */
 void hare(void)
 {
-	printf("You're beat! and yet, you must allow,"
-			"\nIbore my house upon my back!\n");
+	printf("You're beat! and yet, you must allow,");
+	printf("\nIbore my house upon my back!\n");
 }
 
