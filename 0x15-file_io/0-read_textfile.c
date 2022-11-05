@@ -1,31 +1,33 @@
 #include "main.h"
+#include <stdlib.h>
 /**
- * read_textfile - function that reads a text 
+ * read_textfile - function that reads a text
  * file and prints it to the POSIX standard output.
  * @filename: the name of the file
- * @text_content: the content to be written
+ * @letters: the content to be written
  *
  * Return: 1 or -1
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd;
-	int nletters;
-	int rwr;
+	ssize_t o, r, w;
+	char *buffer;
 
-	if (!filename)
-		return (-1);
-	fd = open(filename, O_CREAT | O_WRONGLY | O_TRUNIC, 0600);
-	if (fd == -1)
-		return (-1);
-	if (!text_content)
-		text_content = "";
-	for (nletters = 0; text_content[nletters]; nletters++)
-		;
-	rwr = write(fd, text_content, nletters);
-	if (rwr == -1)
-		return (-1);
-	close(fd);
-	return (1);
+	if (filename == NULL)
+		return (0);
+	buffer = malloc(sizeof(char) * letters);
+	if (buffer == NULL)
+		return (0);
+	o = open(filename, O_RDONLY);
+	r = read(o, buffer, letters);
+	w = write(STDOUT_FILENO, buffer, r);
+	if (o == -1 || r == -1 || w == -1 || w != r)
+	{
+		free(buffer);
+		return (0);
+	}
+	free(buffer);
+	close(o);
+	return (w);
 }
 
